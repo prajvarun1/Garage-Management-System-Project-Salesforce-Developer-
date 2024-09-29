@@ -1,0 +1,102 @@
+Apex Codes for this Garage Management System Project
+
+
+Apex Class:-
+----------
+
+
+1. Click on the Developer console. Now you will see a new console window.
+
+2. In the toolbar, you can see FILE. Click on it and navigate to new and create New apex class.
+
+3. Name the class as “AmountDistributionHandler ”.
+
+CODE:
+----
+public class AmountDistributionHandler {
+	public static void amountDist(list<Appointment__c> listApp){
+
+        list<Service_records__c> serList = new list <Service_records__c>();
+
+        
+
+        for(Appointment__c app : listApp){
+
+            if(app.Maintenance_service__c == true && app.Repairs__c == true && app.Replacement_Parts__c == true){
+
+                app.Service_Amount__c = 10000;
+
+            }
+
+            else if(app.Maintenance_service__c == true && app.Repairs__c == true){
+
+                app.Service_Amount__c = 5000;    
+
+            }
+
+            else if(app.Maintenance_service__c == true && app.Replacement_Parts__c == true){
+
+                app.Service_Amount__c = 8000;    
+
+            }
+
+            else if(app.Repairs__c == true && app.Replacement_Parts__c == true){
+
+                app.Service_Amount__c = 7000;
+
+            }
+
+            else if(app.Maintenance_service__c == true){
+
+                app.Service_Amount__c = 2000;
+
+            }
+
+            else if(app.Repairs__c == true){
+
+                app.Service_Amount__c = 3000;
+
+            }
+
+            else if(app.Replacement_Parts__c == true){
+
+                app.Service_Amount__c = 5000;
+
+            } 
+
+    }
+
+    }
+}
+
+
+Apex Trigger:-
+------------
+
+
+1. Click on File menu in the tool bar, and click on new? Trigger.
+
+2. Enter the trigger name and the object to be triggered.
+
+        a. Name  : AmountDistribution
+
+        b. sObject : Appointment__c
+
+
+CODE:
+----
+
+trigger AmountDistribution on Appointment__c (before insert, before update) {
+
+    
+
+    if(trigger.isbefore && trigger.isinsert || trigger.isupdate){
+
+        AmountDistributionHandler.amountDist(trigger.new);
+
+        
+
+    }
+
+
+}
