@@ -9,27 +9,27 @@ Customer Feedback and Reporting: Capture customer feedback and generate reports 
 Scalability and Customization: Built on Salesforce, ensuring flexibility for customization and scalability as business requirements grow.
 
 # Key Components
-# 1. Vehicle and Service Records
+1. Vehicle and Service Records
 Customer Details: Track customer and vehicle information such as contact details, service history, and maintenance records.
 Appointment Scheduling: Schedule and manage service appointments, including tracking service status and payment.
 Service History: Maintain detailed records of all services performed, including parts used, labor, and service duration.
-# 2. Customer Feedback and Reporting
+2. Customer Feedback and Reporting
 Customer Feedback: Collect ratings and feedback from customers on services provided, enabling improvement opportunities.
 Reports and Dashboards: Generate real-time reports on service statistics, and customer satisfaction. Customize dashboards for different roles within the garage.
-# 3. Salesforce Integration
+3. Salesforce Integration
 The system is built on the Salesforce platform, ensuring reliable data management, seamless integration with other Salesforce modules, and high scalability. The system leverages various Salesforce features such as workflows, validation rules, and automation tools.
 
 # Setup and Configuration
-# 1. Salesforce Developer Account
+1. Salesforce Developer Account
 Before starting the setup, create a Salesforce developer account by following these steps:
 Go to Salesforce Developer Sign-up.
 Complete the form with your personal and company details.
 Activate your account via the verification email.
-# 2. Creating Objects and Custom Tabs
+2. Creating Objects and Custom Tabs
 The system requires several custom objects like Customer Details, Service Records, Appointments, and Billing Details. These objects can be created through Salesforce's Object Manager. Custom tabs are also created to provide easy access to these objects.
-# 3. User Roles and Permissions
+3. User Roles and Permissions
 The system uses role-based access control, where different roles such as Manager and Salesperson have specific access levels to view and edit records. Roles can be defined and assigned in the Salesforce setup.
-# 4. Automation and Workflows
+4. Automation and Workflows
 Set up Flows, Apex Triggers, and Validation Rules to automate tasks such as updating service records, sending email alerts, and enforcing business rules for appointments and billing.
 
 # Usage
